@@ -91,7 +91,7 @@ const Trabalhos: React.FC = () => {
       <div className="flex justify-center mb-5 gap-5">
         <div className="text-center cursor-pointer" onClick={() => window.location.href = '/trabalho'}>
           <div className="relative inline-block">
-            <a href="/trabalho" className="flex items-center text-white-400">
+            <a href="" className="flex items-center text-white-400">
               Veja Mais <span className="arrow-icon ml-2">➡️</span>
             </a>
           </div>

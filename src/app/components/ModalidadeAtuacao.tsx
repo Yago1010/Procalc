@@ -40,7 +40,7 @@ const ModalidadeAtuacao: React.FC = () => {
           <div
             key={index}
             className="flex flex-col items-center cursor-pointer"
-            onClick={() => window.location.href = 'nossametodologia.html'}
+            onClick={() => window.location.href = 'nossa'}
           >
             <img src={modalidade.src} alt={modalidade.alt} className="w-24 h-24 object-cover" />
             <div className="text-white text-center">{modalidade.text.split('\n').map((line, i) => (
@@ -51,7 +51,7 @@ const ModalidadeAtuacao: React.FC = () => {
       </div>
       <button
         className="mt-5 px-4 py-2 bg-[#ffb224] text-white text-[18px]  rounded hover:bg-[#ffb220]"
-        onClick={() => window.location.href = 'nossametodologia.html'}
+        onClick={() => window.location.href = 'nossa'}
       >
         Ver mais
       </button>
