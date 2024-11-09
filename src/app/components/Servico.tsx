@@ -8,6 +8,7 @@ const Servico: React.FC = () => {
       <div className="industry-container w-1/2 mx-auto   mb-10 bg-gray-100 rounded-lg shadow-md flex flex-col items-center relative">
         <div className="industry-content text-center">
           <h2 className="text-yellow-500 text-xl mb-2 absolute top-5 left-1/2 transform -translate-x-1/2 z-10">Indústria</h2>
+          
           <img src="https://www.multiconstrutora.com.br/images/Industrial_1.png" alt="Indústria" className="industry-image w-full h-auto mb-0" />
         </div>
         <ul className="industry-list list-none w-full text-center p-0 m-0">

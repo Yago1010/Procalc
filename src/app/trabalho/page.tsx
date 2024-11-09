@@ -5,7 +5,6 @@ import MobileMenu from "../components/MobileMenu"; // ajuste o caminho conforme 
 import { Bars3Icon } from '@heroicons/react/24/solid'; // Importando o ícone de hambúrguer
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Metodologia from '../components/Metodologia';
 import Servico from '../components/Servico';
 
 
