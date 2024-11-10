@@ -8,13 +8,8 @@ const Metodologia: React.FC = () => {
       {/* Metodologia Container */}
       <div className="text-center mb-10 bg-white">
         <h2 className="text-2xl font-bold   text-black bg-white " > <br />NOSSA METODOLOGIA</h2>
-        <p className="text-white-700 text-center text-lg mb-5">
-          A Multi Construtora tem vasta experiência em planejamento e gerenciamento de obras, para empresas dos mais
-          <br />
-          diversos segmentos e ramos de atuação. Atuando desde a fase de estudo e viabilidade do projeto, a execução e
-          <br />
-          entrega final. Confira abaixo as etapas de planejamento, gerenciamento e pós-obra.
-        </p>
+        <h2 className="text-1xl    text-black  " > <br />A Multi Construtora tem vasta experiência em planejamento e gerenciamento de obras, para empresas dos mais <br/> diversos segmentos e ramos de atuação. Atuando desde a fase de estudo e viabilidade do projeto, a execução <br/>e entrega final. Confira abaixo as etapas de planejamento, gerenciamento e pós-obra.</h2>
+
         <img
           src="https://www.multiconstrutora.com.br/images/Ativo-3-p-1080.png"
           alt="Metodologia"
