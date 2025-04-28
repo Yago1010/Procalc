@@ -5,7 +5,6 @@ import MobileMenu from "../components/MobileMenu"; // ajuste o caminho conforme 
 import { Bars3Icon } from '@heroicons/react/24/solid'; // Importando o ícone de hambúrguer
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Metodologia from '../components/Metodologia';
 import Servico from '../components/Servico';
 
 
@@ -21,22 +20,22 @@ export default function Trabalho() {
   };
 
   return (
-    
+
     <div className="relative min-h-screen bg-gray-900 text-white"> {/* Container com fundo preto */}
-    <Header/>
+      <Header />
       {/* Botão de Menu (apenas em mobile) */}
-      <button 
-        onClick={toggleMobileMenu} 
+      <button
+        onClick={toggleMobileMenu}
         className="absolute top-4 right-4 text-white p-2 rounded focus:outline-none block lg:hidden" // Esconde em telas grandes
       >
         <Bars3Icon className="h-9 w-9" aria-hidden="true" /> {/* Ícone de hambúrguer */}
       </button>
-      
-      <MobileMenu isActive={isMobileMenuActive} onClose={closeMobileMenu} />
-      <Servico/>
-      <Footer/>
 
- 
+      <MobileMenu isActive={isMobileMenuActive} onClose={closeMobileMenu} />
+      <Servico />
+      <Footer />
+
+
     </div>
   );
 }

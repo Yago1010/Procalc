@@ -1,12 +1,12 @@
 "use client"; // Isso torna este componente um Client Component
 
 import React from 'react';
-import { HiMiniBars3 } from "react-icons/hi2";
+import Link from 'next/link'; // Importando o Link do Next.js
+
 const MobileMenu: React.FC<{ isActive: boolean; onClose: () => void }> = ({ isActive, onClose }) => {
   return (
     <div
-      className={`mobile-menu fixed top-0 left-0 w-full h-full bg-black p-5 z-10 ${isActive ? 'block' : 'hidden'
-        }`} // Usando 'block' e 'hidden' diretamente, sem a animação
+      className={`mobile-menu fixed top-0 left-0 w-full h-full bg-black p-5 z-10 ${isActive ? 'block' : 'hidden'}`} // Usando 'block' e 'hidden' diretamente, sem a animação
       onClick={onClose}
     >
       <div className="flex flex-col h-full" onClick={(e) => e.stopPropagation()}> {/* Impede o clique de fechar ao clicar nos itens do menu */}
@@ -15,22 +15,22 @@ const MobileMenu: React.FC<{ isActive: boolean; onClose: () => void }> = ({ isAc
         </button>
         <ul className="list-none p-0 mt-10">
           <li onClick={onClose}>
-            <a href="/" className="text-white hover:text-green-500 transition">Início</a>
+            <Link href="/" className="text-white hover:text-green-500 transition">Início</Link>
           </li>
           <li onClick={onClose}>
-            <a href="/empresa" className="text-white hover:text-green-500 transition">Empresa</a>
+            <Link href="/empresa" className="text-white hover:text-green-500 transition">Empresa</Link>
           </li>
           <li onClick={onClose}>
-            <a href="/orcamento" className="text-white hover:text-green-500 transition">Orçamento</a>
+            <Link href="/orcamento" className="text-white hover:text-green-500 transition">Orçamento</Link>
           </li>
           <li onClick={onClose}>
-            <a href="/portfolio" className="text-white hover:text-green-500 transition">Portifólio</a>
+            <Link href="/portfolio" className="text-white hover:text-green-500 transition">Portifólio</Link>
           </li>
           <li onClick={onClose}>
-            <a href="#" className="text-white hover:text-green-500 transition">Contato</a>
+            <Link href="#" className="text-white hover:text-green-500 transition">Contato</Link>
           </li>
           <li onClick={onClose}>
-            <a href="#" className="text-white hover:text-red-500 transition">Sair</a>
+            <Link href="#" className="text-white hover:text-red-500 transition">Sair</Link>
           </li>
         </ul>
       </div>

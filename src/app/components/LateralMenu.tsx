@@ -1,7 +1,6 @@
 import React from 'react';
 import { HiMiniBars3 } from "react-icons/hi2";
-
-
+import Link from 'next/link'; // Importando o Link
 
 interface LateralMenuProps {
     isActive: boolean;
@@ -19,7 +18,6 @@ const LateralMenu: React.FC<LateralMenuProps> = ({ isActive, onClose, onToggle, 
                 onClick={onToggle} // Alterna o estado do menu
             >
                 <HiMiniBars3 />
-
             </button>
 
             {/* Menu Lateral */}
@@ -33,22 +31,34 @@ const LateralMenu: React.FC<LateralMenuProps> = ({ isActive, onClose, onToggle, 
                     </button>
                     <ul className="list-none p-0 mt-10">
                         <li onClick={onClose}>
-                            <a href="/" className="text-white hover:text-green-500 transition">Início</a>
+                            <Link href="/" className="text-white hover:text-green-500 transition">
+                                Início
+                            </Link>
                         </li>
                         <li onClick={onClose}>
-                            <a href="/empresa" className="text-white hover:text-green-500 transition">Empresa</a>
+                            <Link href="/empresa" className="text-white hover:text-green-500 transition">
+                                Empresa
+                            </Link>
                         </li>
                         <li onClick={onClose}>
-                            <a href="/orcamento" className="text-white hover:text-green-500 transition">Orçamento</a>
+                            <Link href="/orcamento" className="text-white hover:text-green-500 transition">
+                                Orçamento
+                            </Link>
                         </li>
                         <li onClick={onClose}>
-                            <a href="/portfolio" className="text-white hover:text-green-500 transition">Portifólio</a>
+                            <Link href="/portfolio" className="text-white hover:text-green-500 transition">
+                                Portifólio
+                            </Link>
                         </li>
                         <li onClick={onClose}>
-                            <a href="#" className="text-white hover:text-green-500 transition">Contato</a>
+                            <Link href="#" className="text-white hover:text-green-500 transition">
+                                Contato
+                            </Link>
                         </li>
                         <li onClick={onClose}>
-                            <a href="#" className="text-white hover:text-red-500 transition">Sair</a>
+                            <Link href="#" className="text-white hover:text-red-500 transition">
+                                Sair
+                            </Link>
                         </li>
                     </ul>
                 </div>
