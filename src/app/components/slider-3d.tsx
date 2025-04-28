@@ -34,7 +34,7 @@ export default function Slider3D() {
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlide();
-        }, 9000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
