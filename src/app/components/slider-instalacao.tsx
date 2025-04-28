@@ -3,38 +3,27 @@
 import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-export default function SliderInstalacao() {
-    const images = [
+interface SliderInstalacaoProps {
+    images: string[];
+    onImageClick: (index: number) => void;
+}
 
-
-
-
-
-        '/mat-fotos/Folha-A1-Sala-Computador.webp',
-        '/mat-fotos/Projeto-Elétgrico-Folha-2-_-pavimento-1-_.webp',
-        '/mat-fotos/Projeto-Hidrossanitári-folha-1.webp',
-        '/mat-fotos/Projeto-Hidrossanitário-folha-2.webp'
-
-
-    ];
+export default function SliderInstalacao({ images, onImageClick }: SliderInstalacaoProps) {
     const totalSlides = images.length;
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Função para ir para o slide anterior
     const prevSlide = () => {
         setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
     };
 
-    // Função para ir para o próximo slide
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
     };
 
-    // Troca automática de slide a cada 2 segundos
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlide();
-        }, 3000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
@@ -42,7 +31,7 @@ export default function SliderInstalacao() {
     return (
         <div className="flex flex-col items-center justify-center bg-black text-white py-4">
             {/* Título */}
-            <h1 className="text-3xl font-bold mb-4">Projeto Instalações </h1>
+            <h1 className="text-3xl font-bold mb-4">Projeto Instalações</h1>
 
             {/* Container do slider */}
             <div className="relative w-full max-w-[700px] max-h-[700px] overflow-hidden">
@@ -50,7 +39,8 @@ export default function SliderInstalacao() {
                 <img
                     src={images[currentSlide]}
                     alt={`Imagem ${currentSlide + 1}`}
-                    className="w-full h-auto object-contain rounded-lg"
+                    onClick={() => onImageClick(currentSlide)} // <-- Aqui: chama o onImageClick ao clicar
+                    className="w-full h-auto object-contain rounded-lg cursor-pointer"
                 />
 
                 {/* Botão esquerdo */}
