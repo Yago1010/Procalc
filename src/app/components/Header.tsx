@@ -1,12 +1,11 @@
 "use client"; // Isso torna este componente um Client Component
 
 import React, { useState, } from 'react';
-import { useRouter } from 'next/navigation'; // Importa useRouter do Next.js
+
 import Link from 'next/link'
 
 const Header: React.FC = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const router = useRouter(); // Instancia o roteador
 
   const handleMenuToggle = () => {
     setMenuOpen((prev) => !prev); // Alterna o estado do menu
