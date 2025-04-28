@@ -2,12 +2,8 @@
 import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
-interface Slider3DProps {
-    onImageClick: (index: number) => void;  // Definir a propriedade onImageClick
-}
-
 // Componente Slider3D com funcionalidade de Modal
-export default function Slider3D({ onImageClick }: Slider3DProps) {
+export default function Slider3D() {
     const images = [
         '/mat-fotos/3d1.jpg',
         '/mat-fotos/estrutura 0.jpg',

@@ -82,7 +82,7 @@ export default function Home() {
 
             {/* Slider 3D */}
             <Slider3D
-                onImageClick={handleImageClick}  // Passando a função do clique na imagem
+            // Passando a função do clique na imagem
             />
 
             {/* Slider de Instalações */}
