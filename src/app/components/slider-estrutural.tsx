@@ -1,19 +1,15 @@
 "use client";
-
+{/*ESTRUTURAL*/ }
 import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Slider3D() {
     const images = [
         '/mat-fotos/3d1.jpg',
-        '/mat-fotos/antesxdepois.jpg',
         '/mat-fotos/estrutura 0.jpg',
         '/mat-fotos/estrutura 1.jpg',
         '/mat-fotos/estrutura 3d.jpg',
-        '/mat-fotos/Folha-A1-Sala-Computador.webp',
-        '/mat-fotos/Projeto-Elétgrico-Folha-2-_-pavimento-1-_.webp',
-        '/mat-fotos/Projeto-Hidrossanitári-folha-1.webp',
-        '/mat-fotos/Projeto-Hidrossanitário-folha-2.webp'
+
 
 
     ];

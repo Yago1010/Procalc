@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SliderEstrutura from "../components/slider-estrutura";
+import SliderEstrutura from "../components/slider-arquitetonico";
 import { FaWhatsapp } from 'react-icons/fa';
 import LateralMenu from "../components/LateralMenu";
-import Slider3D from "../components/slider-3d";
+import Slider3D from "../components/slider-estrutural";
+import SliderInstalacao from "../components/slider-instalacao";
 
 export default function Home() {
     const [isMobileMenuActive, setMobileMenuActive] = useState(false);
@@ -43,8 +44,9 @@ export default function Home() {
                 className="fixed top-0 left-0 w-full h-full bg-black p-5 z-50"
             />
 
-            <SliderEstrutura />
-            <Slider3D />
+            <SliderEstrutura />{/*ARQUITETONICO*/}
+            <Slider3D />{/*ESTRUTURAL*/}
+            <SliderInstalacao />
             <Footer />
         </div>
     );
